@@ -1,0 +1,21 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"
+  "src/js"]
+
+ :dependencies
+ [[prismatic/schema "1.4.1"]]
+
+ :dev-http {3000 "public"}
+
+ :builds
+  {:app {:target :browser
+         :output-dir "public/assets/app/js"
+         :asset-path "/assets/app/js"
+         ; extending ES5 classes will not work withou
+         ; setting output-feature-set to es5!!
+         :compiler-options {:externs ["src/externs/externs.js"]
+                            :output-feature-set :es5}
+         :modules {:main {:entries [game.core]}}}}}

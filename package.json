@@ -1,0 +1,11 @@
+{
+  "name": "card-game",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.28.15"
+  },
+  "dependencies": {
+    "phaser": "^3.85.2"
+  }
+}
